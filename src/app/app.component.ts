@@ -11,7 +11,7 @@ export class AppComponent {
 
   private timer: any;
   public blocked: boolean = true;
-  public show_access: boolean = false;
+  public show_access: boolean = true;
 
   onClickButton(): void {
     this.blocked = !this.blocked;
