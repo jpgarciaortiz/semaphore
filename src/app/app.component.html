@@ -295,7 +295,18 @@
   }
 </style>
 
-
-<app-tlights #tlights></app-tlights><br>
-
-HOLAAA3
+<div style="text-align: center; display:{{show_access ? 'none' : 'block'}}; margin-top: 50px">
+  <app-tlights #tlights></app-tlights><br>
+  <button mat-raised-button style="margin-top: 30px; height: 70px; width: 150px"
+  color="primary" [disabled]="false"
+  (click)="onClickButton()">{{blocked ? 'Permitir' : 'Bloquear'}}</button>
+  </div>
+  
+  <div id="access_panel" style="display:{{show_access ? 'block' : 'none'}}">
+     <h3>ACCESS CODE</h3>
+  <code-input #code_input [isCodeHidden]="true" 
+  [codeLength]="4" (codeCompleted)="onCodeCompleted($event)"
+  style="--item-spacing: 25px; --item-height: 4em; "
+  >
+  </code-input>
+  </div>
