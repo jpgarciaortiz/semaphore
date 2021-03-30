@@ -1,3 +1,0 @@
-# Semaphore
-
-Simple Angular example
